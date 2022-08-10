@@ -45,3 +45,4 @@ select pokemon_id, count(pokemon_id) from pokemon_trainer group by pokemon_id HA
 
 PART 4
 
+select trainers.trainername 'Trainer Name', pokemons.name 'Pokemon Name', pokemon_trainer.pokelevel 'Level', p_types.name 'Primary Type', s_types.name 'Secondary Type' from pokemons JOIN types p_types ON pokemons.primary_type = p_types.id LEFT JOIN types s_types ON pokemons.secondary_type = s_types.id JOIN pokemon_trainer ON pokemons.id = pokemon_trainer.pokemon_id JOIN trainers ON pokemon_trainer.trainerID = trainers.trainerid ORDER BY attack & spatk DESC;
