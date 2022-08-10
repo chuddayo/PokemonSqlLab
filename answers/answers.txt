@@ -1,0 +1,19 @@
+PART 1
+
+What are all the types of pokemon that a pokemon can have?
+
+
+What is the name of the pokemon with id 45? EEVEE
+select * from pokemons where id = 45;
+
+How many pokemon are there? 656
+select COUNT(*) from pokemons;
+
+How many types are there? 18
+select COUNT(*) from types;
+
+How many pokemon have a secondary type? 316
+select COUNT(*) from pokemons where secondary_type IS NOT NULL;
+
+
+PART 2
